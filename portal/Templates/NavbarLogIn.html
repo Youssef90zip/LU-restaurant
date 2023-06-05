@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+	    {% load static %}
+	        <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body>
+ 			 	<nav>
+				<div class ="logo"><a href ="% url 'homepage'%}">LU-Restaurant</a></div>
+				<ul>
+				<li><a href= "{% url 'menulog'%}">Speisekarte</a></li>
+					<li><a href= "{% url 'meine_bestellungen' kunde_id=request.user.kunde.id %}">Meine Bestellungen</a></li>
+					<li><a href= "{% url 'reservierungLogin'%}">Reservierung</a></li>
+				<li> <a href="{% url 'logout'%}">Abmelden</a></li>
+                </ul>
+  				</nav>
+
+</body>
+		{% block content %}
+		{% endblock %}
+
+
+</html>
+

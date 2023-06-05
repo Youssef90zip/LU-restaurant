@@ -1,0 +1,56 @@
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="{% static 'css/OrderConfirmation.css' %}" /><html lang="en">
+<body>
+
+<h2>Order Confirmation</h2>
+<p>Your order has been placed successfully.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Gericht</th>
+      <th>Menge</th>
+      <th>Preis</th>
+      <th>Summe</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for bestellposition in bestellung.bestellposition_set.all %}
+      <tr>
+        <td>{{ bestellposition.gericht.name }}</td>
+        <td>{{ bestellposition.menge }}</td>
+        <td>{{ bestellposition.preis }}</td>
+        <td>{{ bestellposition.gesamtsumme }}</td>
+      </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="3">Gesamtsumme:</td>
+      <td>{{ bestellung.gesamtsumme }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<form method="POST" action="{% url 'order_confirmation' bestellung_id=bestellung.id %}">
+  {% csrf_token %}
+  <div>
+    <label for="card_number">Kreditkartennummer:</label>
+    <input type="text" id="card_number" name="card_number" required>
+  </div>
+  <div>
+    <label for="expiry_date">Ablaufdatum:</label>
+    <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY" required>
+  </div>
+  <div>
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+  </div>
+  <button type="submit">Zahlung abschließen</button>
+</form>
+
+
+</body>
+</html>

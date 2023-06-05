@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300;1,400&family=Poppins:ital,wght@0,200;1,100&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', sans-serif;
+}
+nav{
+	background: #890d0d;
+	box-sizing: border-box;
+	font-family: 'poppins', sans-serif;
+}
+
+nav .logo{
+	float: left;
+	color: white;
+	font-size: 42px;
+	font-weight: 600;
+	line-height: 70px;
+	padding-left: 60px;
+	text-decoration: none;
+
+	}
+	a {
+	text-decoration: none;
+	color: #e7e5eb;
+	}
+
+nav:after{
+
+	content: '';
+	clear: both;
+	display: table;
+}
+
+nav ul{
+	float :right;
+	list-style: none;
+	margin-right: 40px;
+	position: relative;
+}
+
+nav ul li{
+	float: left;
+	display: inline-block;
+	background: #890d0d;
+	margin: 0 5px;
+	padding-top: 8px;
+}
+
+nav ul li a{
+	color: #e6e6e6;
+	text-decoration: none;
+	list-style: 70px;
+	font-size: 24px;
+	padding: 8px 15px;
+
+}
+
+nav ul li a:hover{
+
+	top: 40px;
+	color: #ff9d37;
+	border-radius : 5px;
+	box-shadow:  0 0 5px #ff9d37 ,
+				 0 0 5px #ff9d37;
+
+	}
+
+nav ul ul{
+	position: absolute;
+	top : 64px;
+	/* optimize the drop down */
+	/*border-top: 2px solid cyan;
+	border-bottom: 2px solid cyan;*/
+	opacity: 0;
+	visibility: hidden;
+	transition : top .3s;
+
+}
+
+nav ul li:hover > ul{
+
+	opacity: 1;
+	visibility: visible;
+	}
+
+nav ul ul li{
+
+	position: relative;
+	margin: 0px;
+	width:  230px;
+	float: none;
+	display: list-item;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+
+}
+
+nav ul li a{
+
+	line-height: 55px;
+}
+
+
+nav ul ul ul li{
+
+	position: relative;
+	top: -35px;
+	left: 150px;
+
+	}
+
+/* footer css*/
+
+
+footer{
+	color: #f7f7f7;
+	background-color: #890d0d;
+	box-sizing: border-box;
+	position: fixed;
+	bottom : 0;
+	font-size: 14px;
+	width: 100%;
+	height: 140px;
+	box-shadow: 4px solid #115fce;
+
+}
+
+.main{
+	display: flex;
+
+}
+
+.main .box{
+	flex-basis: 50%;
+	padding: 10px 20px ;
+	margin :  5px 5px ;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.box h2{
+
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+
+}
+
+.box .inhalt{
+
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px 5px 10px;
+}
+
+.left .inhalt{
+	text-align: justify;
+	padding-bottom: 30px;
+}
+.left .inhalt .sozial-media{
+	margin: 20px 0 0 0 ;
+}
+.left .inhalt .sozial-media a{
+
+	padding: 0 2px;
+	}
+
+.left .inhalt .sozial-media a span{
+
+	height: 40px;
+	width: 40px;
+	color: white;
+	background-color: black;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 15px;
+	transition: .03s;
+	}
+.left .inhalt .sozial-media a span:hover{
+	background-color: #ff9d37;
+	}
+
+
+/* Für Menu Seite */
+
+.category{
+
+width: 100%;
+display: flex;
+margin-bottom: 50px;
+justify-content: center;
+background: red;
+}
+
+
+.category .list-items {
+
+width: 90%;
+position: relative;
+}
+
+.category .list-items h3 {
+font-size: 30px;
+font-weight: 600;
+margin-bottom: 70px;
+
+}
+
+.category .list-items .card-list {
+
+display: grid;
+grid-template-columns: repeat();
+
+}
+
+.category .card-list .card {
+
+width: 200px;
+height: auto;
+display: block;
+padding: 10px;
+outline: 2px solid blue;
+border-radius: 10px;
+position: relative;
+background: white;
+}
+
+.category .card-list .card img{
+
+width: 100px;
+height: auto;
+bottom: 140px;
+left: 50px;
+object-fit: cover;
+object-position: center;
+background-repeat: no-repeat;
+position: absolute;
+box-shadow: 0 20px 20px red;
+border-radius: 50%;
+
+
+}

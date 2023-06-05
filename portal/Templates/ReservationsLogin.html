@@ -1,0 +1,57 @@
+{% extends 'NavbarLogIn.html' %}
+{% load static %}
+
+<html>
+<head>
+	<title>Table Reservations</title>
+</head>
+<body>
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/reservierung.css' %}" />
+
+
+<div class="reservation">
+
+    <h3> {{msg}}</h3>
+
+  <form method="POST" action="{% url 'reservierung' %}">
+    {% csrf_token %}
+    <h2>Make your Reservation</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Datum:</label>
+      <input type="date" class="form-control" id="date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="time">Uhrzeit:</label>
+      <input type="time" class="form-control" id="time" name="time" required>
+    </div>
+       <div class="form-group">
+      <label>Telnummer:</label>
+      <input type="text" class="form-control" name="telnum" required>
+    </div>
+    <div class="form-group">
+      <label for="guests">Anzahl der Gäste:</label>
+      <input type="number" class="form-control" id="guests" name="guests" required>
+    </div>
+      <div class="form-group">
+      <label>Notes</label>
+      <input type="text" class="form-control"  name="notes" >
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+
+{% endblock %}
+
+</html>

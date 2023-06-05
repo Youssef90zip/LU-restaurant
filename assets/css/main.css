@@ -1,0 +1,9 @@
+{% load static %}
+
+body {
+  background-image: url("{% static 'img/homepage.jpg' %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+

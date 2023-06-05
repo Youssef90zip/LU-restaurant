@@ -1,0 +1,56 @@
+{% extends 'Navbar.html' %}
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrierung</title>
+</head>
+<body>
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+
+<div class= "card" id="regi">
+
+    <div class= "inner-box">
+
+    <h2>Registrierung</h2>
+
+            <h2 class="message">{{ message }}</h2>
+
+    <form action="{% url 'registrierung' %}" method= "POST">
+        {% csrf_token %}
+    <input   class= "input-box" type= "text" name= "fname"
+    placeholder="Vorname" required/>
+        <input   class= "input-box" type= "text" name= "lname"
+    placeholder="Nachname" required/>
+
+            <input   class= "input-box" type= "text" name= "adresse"
+    placeholder=" Adresse" required/>
+
+    <input  class= "input-box" type= "text" name= "email"
+    placeholder="Email " required/>
+
+
+    <input   class= "input-box" type= "password" name= "password"
+    placeholder=" Passwort" required/>
+
+    <input   class= "input-box" type= "password" name= "repeatpassword"
+    placeholder=" Passwort wiederholen" required/>
+
+    <input  class= "submit-btn" type= "submit" value= "Registrieren"/>
+
+<p> Haben Sie schon ein Account ? dann klicken Sie bitte<a href= "{% url 'anmeldung'%}"> Hier zur Anmeldung</a>
+
+</form>
+</div>
+</div>
+
+{% endblock %}
+
+</body>
+
+
+</html>

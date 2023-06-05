@@ -1,0 +1,36 @@
+{% extends 'NavbarLogIn.html' %}
+
+<html lang="en">
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="{% static 'css/OrderConfirmation.css' %}" />
+<body>
+<h2>Meine Bestellungen</h2>
+<table>
+  <tr>
+    <th>Bestellnummer</th>
+    <th>Datum</th>
+    <th>Gesamtbetrag</th>
+    <th>Status</th>
+  </tr>
+  {% for bestellung in bestellungen %}
+    <tr>
+      <td>{{ bestellung.id }}</td>
+      <td>{{ bestellung.datum }}</td>
+      <td>{{ bestellung.gesamtsumme }}</td>
+      <td> bestätigt </td>
+    </tr>
+  {% empty %}
+    <tr>
+      <td colspan="4">Keine Bestellungen gefunden.</td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+.mainbox{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(255, 230, 179, 0.5), rgba(255, 255, 250, 0.5)), url("http://localhost:8000/static/img/homepage.jpg");
+    	text-align: center;
+}
+
+.mainbox h1{
+	font-weight:bolder;
+	color: black;
+	font-size: 60px;
+	text-align: center;
+
+	}
+
+.mainbox  p{
+	color: black;
+	text-align: center;
+}
+
+.mainbox a{
+    display: block;
+	background-color: #890d0d;
+	padding: 5px 2px;
+	color: white;
+	font-size: 30px;
+    margin-top: 100px !important;
+	border-radius: 20px;
+  width: 30%;
+  margin: 0 auto;
+
+}
+
+.mainbox a:hover{
+	background-color: #ff9d37;
+	color: white;
+}

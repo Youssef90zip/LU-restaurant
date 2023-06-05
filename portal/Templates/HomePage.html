@@ -1,0 +1,34 @@
+{% extends 'Navbar.html' %}
+ {% load static %}
+
+<html lang="en">
+<head>
+	{% block content%}
+    <title>LU-Resaturant</title>
+     <link rel="stylesheet" href="{% static 'css/HomePage.css' %}" />
+</head>
+
+
+<div class = "mainbox">
+
+<h1> Dine & Enjoy</h1>
+            <br>
+            <br>
+
+<p>Willkommen auf unserer Seite! Wir sind stolz darauf, Ihnen ein einzigartiges Kulinarisches Erlebnis zu bieten.
+    <br>
+Unsere Küche ist von der traditionellen Küche inspiriert.
+        <br>
+    Wir verwenden nur die frischesten Zutaten und bereiten unsere Gerichte mit viel Liebe zum Detail zu, damit jede Mahlzeit zu einem Genuss wird.
+Egal, ob Sie Lust auf ein romantisches Abendessen zu zweit oder eine Familienfeier planen,
+        <br>
+    wir sind für Sie da und bieten Ihnen die Möglichkeit, Ihren Tisch selbstständig auf unserer Website zu reservieren.
+        <br>
+Unser freundliches und professionelles Personal bereitet die
+Mahlzeiten zu und sorgt dafür, dass Sie sie pünktlich zu Hause erhalten.</p>
+    <br>
+<a href = "..">Zur Reservierung</a>
+
+{% endblock %}
+
+</html>

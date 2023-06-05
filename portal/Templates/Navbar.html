@@ -1,0 +1,56 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+	    {% load static %}
+	        <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body>
+ 			 	<nav>
+				<div class ="logo"><a href ="% url 'homepage'%}">LU-Restaurant</a></div>
+				<ul>
+				<li><a href= "{% url 'homepage'%}">Home</a></li>
+				<li><a href= "{% url 'menu'%}">Speisekarte</a></li>
+					<li><a href= "{% url 'reservierung'%}">Reservierung</a></li>
+				<li> <a href="{% url 'anmeldung'%}">Anmelden</a></li>
+                </ul>
+  				</nav>
+
+			<footer class= "main">
+				<div class= "left box">
+				<h2>Über uns</h2>
+
+				<div class= "inhalt"> <p> Besuchen Sie uns auf unseren sozialen Netzwerken</p>
+				<div class= "sozial-media">
+				<a href= "https://www.facebook.com"> <span class= "fab fa-facebook-f"></span></a>
+				<a href= "https://www.facebook.com"> <span class= "fab fa-instagram"></span></a>
+				<a href= "https://www.facebook.com"> <span class= "fab fa-twitter"></span></a>
+				<a href= "https://www.youtube.com"> <span class= "fab fa-youtube"></span></a>
+				</div>
+				</div>
+				</div>
+
+				<div class= "center box">
+				<h2>Adresse</h2>
+
+				<div class= "inhalt">
+
+				<span class= "fas fa-map-marker-alt"></span>
+				<span class= "text"> Ernst-Boehe-Str. 4 Ludwigshafen am Rhein</span>
+				<br>
+				<span class= "fas fa-phone-alt"></span>
+				<span class= "text"> +49 001 500 57</span>
+				<br>
+				<span class= "fas fa-envolope-alt"></span>
+				<span class= "text"> lu-restaurant@gmail.com</span>
+				</div>
+				</div>
+				</footer>
+</body>
+		{% block content %}
+		{% endblock %}
+
+
+</html>
+

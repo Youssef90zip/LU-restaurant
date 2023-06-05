@@ -1,0 +1,96 @@
+		body {
+    background-image: linear-gradient(rgba(255, 230, 179, 0.5), rgba(255, 255, 250, 0.5)), url("http://localhost:8000/static/img/homepage.jpg");
+
+		}
+
+			.reservation {
+			max-width: 500px;
+			height: 600px;
+			margin: 30px auto ;
+			margin-bottom: 300px;
+			padding: 10px;
+			background-color: #890d0d;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+		}
+
+
+		.reservation h2 {
+			text-align: center;
+			margin-top: 10px;
+			color: black;
+		}
+
+		.reservation h3 {
+			text-align: center;
+			margin-button: 50px;
+			color: white;
+		}
+
+		.form-group {
+			margin-bottom: 10px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			color: black;
+			font-size: 16px;
+			font-weight: bolder;
+		}
+
+		input[type=text], input[type=email], input[type=date], input[type=time], input[type=number] {
+			width: 100%;
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			font-size: 12px;
+			font-weight: bolder;
+			color: black;
+			background-color: #f9f9f9;
+		}
+
+		button[type=submit] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 16px;
+			transition: background-color 0.3s ease;
+		}
+
+		button[type=submit]:hover {
+			background-color: #3e8e41;
+		}
+
+		@media screen and (max-width: 500px) {
+			.container {
+				max-width: 100%;
+				padding: 10px;
+				border-radius: 0px;
+			}
+		}
+
+
+
+	.reservation	table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ .reservation th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+.reservation tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.reservation th {
+  background-color: #4CAF50;
+  color: white;
+}

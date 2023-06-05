@@ -1,0 +1,41 @@
+{% extends 'Navbar.html' %}
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anmeldung</title>
+</head>
+
+<body>
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/login.css'%}" />
+
+
+<div class= "card">
+<div class= "inner-box">
+
+    <h2 class="message">{{ message }}</h2>
+
+<h2>Anmeldung</h2>
+
+<form action="{% url 'anmeldung' %}" method= "POST">
+
+    {% csrf_token %}
+<input  class= "input-box" type= "email" name= "email" value= "" placeholder="Email " required/>
+<input   class= "input-box" type= "password" name= "password" value= "" placeholder=" Passwort" required/>
+<input  class= "submit-btn" type= "submit" name= "anmeldung" value= "Anmelden"/>
+
+<p> Haben Sie noch kein Account ? dann klicken Sie bitte<a href= "{% url 'registrierung'%}"> Hier zur Registrierung</a>
+
+
+</form>
+</div>
+</div>
+
+{% endblock %}
+
+
+</body>
+</html>

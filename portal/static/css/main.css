@@ -1,0 +1,124 @@
+ul.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+ul.menu li {
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgb(89, 16, 0);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  flex-basis: 31.33%;
+  max-width: 31.33%;
+}
+
+ul.menu li img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+ul.menu li h3 {
+  color: #2a2a2a;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+ul.menu li p {
+  color: #666666;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+ul.menu li:hover {
+  box-shadow: 0 8px 16px rgb(90, 20, 2);
+  transform: translateY(-1px);
+  transition: all 0.3s ease-in-out;
+}
+
+ul.menu li:hover h3 {
+  color: black;
+}
+
+ul.menu li:hover p {
+  color: red;
+}
+
+
+.styled-checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.styled-checkbox:checked {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.styled-checkbox:checked:after {
+  content: "\2714";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+.wrapper {
+  position: relative;
+  padding-bottom: 5px; /* add some padding to make room for the button */
+}
+
+#menu-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* Your button styles */
+  position: sticky;
+
+  left: 50%;
+  z-index: 1;
+  margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+#menu-btn:hover {
+  background-color: #1565C0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+

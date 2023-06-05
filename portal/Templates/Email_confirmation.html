@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Bestellung Confirmation</title>
+</head>
+<body>
+
+    <h1>Bestellung Confirmation</h1>
+    <p>Sehr geehrte/r {{ bestellung.kunde.user.first_name }} {{ bestellung.kunde.user.last_name }} ,</p>
+    <p>Vielen Dank für Ihre Bestellung. Wir haben Ihre Bestellung erhalten und werden diese so schnell wie möglich bearbeiten.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Produkt</th>
+                <th>Menge</th>
+                <th>Preis</th>
+                <th>Gesamtsumme</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bestellposition in bestellung.bestellposition_set.all %}
+                <tr>
+                    <td>{{ bestellposition.produkt }}</td>
+                    <td>{{ bestellposition.menge }}</td>
+                    <td>{{ bestellposition.preis }}</td>
+                    <td>{{ bestellposition.gesamtsumme }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Gesamtsumme: {{ bestellung.gesamtsumme }}</p>
+    <p>Versandadresse:</p>
+
+    <p>Wenn Sie Fragen zu Ihrer Bestellung haben, können Sie uns gerne kontaktieren.</p>
+    <p>Mit freundlichen Grüßen,</p>
+    <p>Das {{ site_name }} Team</p>
+
+
+</body>
+</html>

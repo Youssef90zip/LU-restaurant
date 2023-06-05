@@ -1,0 +1,30 @@
+{% extends 'Navbar.html' %}
+
+{% block content %}
+     {% load static %}
+
+     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+<form action="{% url 'process_order' %}" method="post">
+  {% csrf_token %}
+    <button type="submit" id="menu-btn">Bestellen</button>
+  <ul class="menu">
+    {% for gericht in gerichte %}
+      <li>
+        <input type="checkbox" name="gericht_ids" value="{{ gericht.id }}" class="styled-checkbox">
+        <img src="{{ gericht.image.url }}" alt="{{ gericht.name }}" width="200" height="200">
+        <h3>{{ gericht.name }}</h3>
+        <p>{{ gericht.beschreibung }}</p>
+        <p>{{ gericht.preis }} €</p>
+        <label for="gericht_{{ gericht.id }}_quantity">Quantity:</label>
+      <input type="number" id="gericht_{{ gericht.id }}_quantity" name="gericht_{{ gericht.id }}_quantity" min="1" max="10" value="1">
+      </li>
+    {% endfor %}
+  </ul>
+  <div class="wrapper">
+</div>
+</form>
+
+{% endblock %}
+
+</html>
